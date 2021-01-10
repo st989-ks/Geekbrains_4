@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Geekbrains_4_1</string>
+    <string name="editTextFirst">Что нибудь пишем тут</string>
+    <string name="textHelloFirst">Привет андроид</string>
+    <string name="buttonTextStart">Нажималка</string>
+    <string name="switchText">Переключалка</string>
+    <string name="checkBoxText">Отмечалка</string>
+    <string name="toggleButtonText">Выключалка</string>
+    <string name="textOffFirst">Что-то выкл</string>
+    <string name="textOnFirst">Что-то вкл</string>
+    <string name="editTextSecond">Вводим какой нибудь текст</string>
+    <string name="editTextThird">Вводим свое имя</string>
+    <string name="editTextFourth">Вводим свой телефон</string>
+    <string name="editTextFifth">Вводим число</string>
+    <string name="editTextSixth">Вводим электронную почту</string>
+    <string name="editTextSeventh">Вводим пароль</string>
+    <string name="editTextEighth">А тут дату</string>
 </resources>

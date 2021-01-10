@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding">15dp</dimen>
+    <dimen name="textViewSize">25dp</dimen>
+    <dimen name="toggleButtonLayout">130dp</dimen>
+    <dimen name="calenderHeight">260dp</dimen>
+</resources>

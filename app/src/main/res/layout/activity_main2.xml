@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="@string/textHelloFirst"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textSize="@dimen/textViewSize" />
+
+    <EditText
+        android:id="@+id/editTextText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextSecond"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextThird"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextFourth"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="20"
+        android:inputType="number"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextFifth"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="20"
+        android:inputType="textEmailAddress"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextSixth"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="20"
+        android:inputType="textPassword"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextSeventh"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+    <EditText
+        android:id="@+id/editTextText7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="20"
+        android:inputType="date"
+        android:paddingTop="@dimen/padding"
+        android:text="@string/editTextEighth"
+        android:textAlignment="center"
+        android:textColor="@android:color/secondary_text_dark" />
+
+
+</LinearLayout>

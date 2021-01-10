@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorPrimaryDark">#4C1EB3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="backgroundTintToggleButton">#959548</color>
+    <color name="calenderTextColorFirst">#3E2927</color>
+    <color name="calenderTextColorSecond">#E6675E</color>
+    <color name="calenderTextColorThird">#1BFF0000</color>
+
 </resources>
