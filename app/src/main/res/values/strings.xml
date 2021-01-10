@@ -16,5 +16,5 @@
     <string name="editTextSeventh">Вводим пароль</string>
     <string name="editTextEighth">А тут дату</string>
     <string name="textName">КАЛЬКУЛЯТОР</string>
-    <string name="test">Проба</string>
+    <string name="test">Проба (вывод)</string>
 </resources>
