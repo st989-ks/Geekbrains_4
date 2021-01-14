@@ -37,7 +37,8 @@
         android:padding="@dimen/padding"
         android:stateListAnimator="@android:anim/anticipate_overshoot_interpolator"
         android:text="@string/buttonTextStart"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        />
 
     <Switch
         android:id="@+id/switch2"

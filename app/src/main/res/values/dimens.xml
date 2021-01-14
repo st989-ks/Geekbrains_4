@@ -2,7 +2,7 @@
 <resources>
     <dimen name="padding">15dp</dimen>
     <dimen name="textViewSize">20dp</dimen>
-    <dimen name="textViewSizeFirst">40dp</dimen>
+    <dimen name="textViewSizeFirst">20dp</dimen>
     <dimen name="toggleButtonLayout">130dp</dimen>
     <dimen name="calenderHeight">260dp</dimen>
     <dimen name="textViewCalculator">50dp</dimen>

@@ -7,5 +7,7 @@
     <color name="calenderTextColorFirst">#3E2927</color>
     <color name="calenderTextColorSecond">#E6675E</color>
     <color name="calenderTextColorThird">#1BFF0000</color>
+    <color name="outputWindow">#99D6D6D6</color>
+    <color name="inputWindow">#99FFFFFF</color>
 
 </resources>

@@ -1,175 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pay_937884_1920"
     android:padding="@dimen/padding">
 
-    <TextView
-        android:id="@+id/nameCalculator"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/textViewCalculator"
-        android:autoSizeMaxTextSize="@dimen/textViewSize"
-        android:text="@string/textName"
-        android:textAlignment="center"
-        android:textColor="@android:color/primary_text_light_nodisable"
-        android:textSize="@dimen/textViewSizeFirst"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/viewEnd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoSizeMaxTextSize="@dimen/textViewSizeFirst"
+        android:background="@color/inputWindow"
         android:text="@string/test"
         android:textAlignment="center"
         android:textColor="@android:color/primary_text_light_nodisable"
         android:textSize="@dimen/textViewSizeFirst"
-        app:layout_constraintBottom_toTopOf="@+id/numberField"
-        app:layout_constraintTop_toBottomOf="@+id/nameCalculator" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <EditText
         android:id="@+id/numberField"
+        style="@android:style/Widget.DeviceDefault.EditText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/textViewCalculator"
         android:autoSizeMaxTextSize="@dimen/textViewSize"
+        android:background="@color/inputWindow"
         android:inputType="phone"
         android:text="@string/test"
-        app:layout_constraintBottom_toTopOf="@+id/firstButtonPanel" />
+        app:layout_constraintBottom_toTopOf="@+id/ButtonPanel"
+        />
+
+    <LinearLayout
+        android:id="@+id/ButtonPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding"
+        android:background="@color/inputWindow"
+        app:layout_constraintBottom_toTopOf="@+id/firstButtonPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/buttonСlear" />
+
+        <Button
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/buttonSquaring" />
+
+        <Button
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/buttonRoot" />
+
+        <Button
+            style="@android:style/Widget.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/buttonWipe" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/firstButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding"
+        android:background="@color/inputWindow"
         app:layout_constraintBottom_toTopOf="@+id/secondButtonPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="7" />
+            android:text="@string/buttonSeven" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="8" />
+            android:text="@string/buttonEight" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="9" />
+            android:text="@string/buttonNine" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="/" />
+            android:text="@string/buttonSplit" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/secondButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
+        android:background="@color/inputWindow"
         app:layout_constraintBottom_toTopOf="@+id/thirdButtonPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4" />
+            android:text="@string/ButtonFour" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="5" />
+            android:text="@string/ButtonFive" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="6" />
+            android:text="@string/ButtonSix" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="*" />
+            android:text="@string/ButtonMultiply" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/thirdButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/inputWindow"
         app:layout_constraintBottom_toTopOf="@+id/forthButtonPanel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1" />
+            android:text="@string/ButtonOne" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="2" />
+            android:text="@string/ButtonTwo" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="3" />
+            android:text="@string/ButtonThree" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="@string/ButtonMinus" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/forthButtonPanel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/inputWindow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="," />
+            android:text="@string/ButtonDot" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="0" />
+            android:text="@string/ButtonZero" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="=" />
+            android:text="@string/ButtonEqualTo" />
 
         <Button
+            style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="+" />
+            android:text="@string/ButtonPlus" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
