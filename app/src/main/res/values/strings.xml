@@ -16,15 +16,15 @@
     <string name="editTextSeventh">Вводим пароль</string>
     <string name="editTextEighth">А тут дату</string>
     <string name="textName">КАЛЬ-КУЛЬ</string>
-    <string name="test">Проба (вывод)</string>
-    <string name="buttonRoot">√</string>
-    <string name="buttonSquaring">x^2</string>
-    <string name="buttonСlear">С</string>
-    <string name="buttonWipe">\u2220</string>
+    <string name="test">---------------</string>
+    <string name="buttonRoot">\u221a</string>
+    <string name="buttonSquaring">x\u00B2</string>
+    <string name="buttonClear">С</string>
+    <string name="buttonWipe">"&lt;"</string>
     <string name="buttonSeven">7</string>
     <string name="buttonEight">8</string>
     <string name="buttonNine">9</string>
-    <string name="buttonSplit">/</string>
+    <string name="buttonSplit">\u00F7</string>
     <string name="ButtonPlus">+</string>
     <string name="ButtonEqualTo">=</string>
     <string name="ButtonZero">0</string>
@@ -33,7 +33,7 @@
     <string name="ButtonThree">3</string>
     <string name="ButtonTwo">2</string>
     <string name="ButtonOne">1</string>
-    <string name="ButtonMultiply">*</string>
+    <string name="ButtonMultiply">\u00D7</string>
     <string name="ButtonSix">6</string>
     <string name="ButtonFive">5</string>
     <string name="ButtonFour">4</string>

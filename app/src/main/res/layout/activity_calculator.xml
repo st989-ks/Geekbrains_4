@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pay_937884_1920"
@@ -9,29 +8,30 @@
 
 
     <TextView
-        android:id="@+id/viewEnd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="@dimen/textViewSizeFirst"
-        android:background="@color/inputWindow"
-        android:text="@string/test"
-        android:textAlignment="center"
-        android:textColor="@android:color/primary_text_light_nodisable"
-        android:textSize="@dimen/textViewSizeFirst"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <EditText
-        android:id="@+id/numberField"
+        android:id="@+id/numberViewWindow"
         style="@android:style/Widget.DeviceDefault.EditText"
         android:layout_width="match_parent"
         android:layout_height="@dimen/textViewCalculator"
         android:autoSizeMaxTextSize="@dimen/textViewSize"
-        android:background="@color/inputWindow"
+        android:background="@color/outputWindow"
+        android:focusable="false"
+        android:gravity="end"
         android:inputType="phone"
         android:text="@string/test"
-        app:layout_constraintBottom_toTopOf="@+id/ButtonPanel"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/numberFieldWindow" />
+
+    <TextView
+        android:id="@+id/numberFieldWindow"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textViewSize"
+        android:autoSizeMaxTextSize="@dimen/textViewSize"
+        android:background="@color/inputWindow"
+        android:focusable="false"
+        android:gravity="end"
+        android:inputType="phone"
+        android:text="@string/test"
+        app:layout_constraintBottom_toTopOf="@+id/ButtonPanel" />
 
     <LinearLayout
         android:id="@+id/ButtonPanel"
@@ -44,13 +44,15 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/ButtonClear"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/buttonСlear" />
+            android:text="@string/buttonClear" />
 
         <Button
+            android:id="@+id/ButtonSquaring"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -58,6 +60,7 @@
             android:text="@string/buttonSquaring" />
 
         <Button
+            android:id="@+id/ButtonRoot"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -65,6 +68,7 @@
             android:text="@string/buttonRoot" />
 
         <Button
+            android:id="@+id/ButtonWipe"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -83,6 +87,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/ButtonSeven"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -90,6 +95,7 @@
             android:text="@string/buttonSeven" />
 
         <Button
+            android:id="@+id/ButtonEight"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -97,6 +103,7 @@
             android:text="@string/buttonEight" />
 
         <Button
+            android:id="@+id/ButtonNine"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -104,6 +111,7 @@
             android:text="@string/buttonNine" />
 
         <Button
+            android:id="@+id/ButtonSplit"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -121,6 +129,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/ButtonFour"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -128,6 +137,7 @@
             android:text="@string/ButtonFour" />
 
         <Button
+            android:id="@+id/ButtonFive"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -135,6 +145,7 @@
             android:text="@string/ButtonFive" />
 
         <Button
+            android:id="@+id/ButtonSix"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -142,6 +153,7 @@
             android:text="@string/ButtonSix" />
 
         <Button
+            android:id="@+id/ButtonMultiply"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -159,6 +171,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/ButtonOne"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -166,6 +179,7 @@
             android:text="@string/ButtonOne" />
 
         <Button
+            android:id="@+id/ButtonTwo"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -173,6 +187,7 @@
             android:text="@string/ButtonTwo" />
 
         <Button
+            android:id="@+id/ButtonThree"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -180,6 +195,7 @@
             android:text="@string/ButtonThree" />
 
         <Button
+            android:id="@+id/ButtonMinus"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -197,6 +213,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/ButtonDot"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -204,6 +221,7 @@
             android:text="@string/ButtonDot" />
 
         <Button
+            android:id="@+id/ButtonZero"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -211,6 +229,7 @@
             android:text="@string/ButtonZero" />
 
         <Button
+            android:id="@+id/ButtonEqualTo"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -218,6 +237,7 @@
             android:text="@string/ButtonEqualTo" />
 
         <Button
+            android:id="@+id/ButtonPlus"
             style="@android:style/Widget.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

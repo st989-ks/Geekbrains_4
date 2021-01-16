@@ -16,7 +16,6 @@
 
     <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Large">
         <item name="android:textColor">@color/calenderTextColorFirst</item>
-
     </style>
 
 
