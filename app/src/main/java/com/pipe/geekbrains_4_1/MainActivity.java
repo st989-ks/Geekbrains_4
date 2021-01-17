@@ -183,34 +183,34 @@ public class MainActivity extends AppCompatActivity {
                     setNumberFieldWindow("9");
                     break;
                 case R.id.ButtonPlus:
-                    setNumberFieldWindow("+");
+                    setSymbolCounter("+");
                     break;
                 case R.id.ButtonMinus:
-                    setNumberFieldWindow("-");
+                    setSymbolCounter("-");
                     break;
                 case R.id.ButtonSplit:
-                    setNumberFieldWindow("\u00F7");
+                    setSymbolCounter("\u00F7");
                     break;
                 case R.id.ButtonMultiply:
-                    setNumberFieldWindow("\u00D7");
+                    setSymbolCounter("\u00D7");
                     break;
                 case R.id.ButtonSquaring:
-                    setNumberFieldWindow("x\u00B2");
+                    setEqualToCounter("x\u00B2");
                     break;
                 case R.id.ButtonRoot:
-                    setNumberFieldWindow("\u221a");
+                    setEqualToCounter("\u221a");
                     break;
                 case R.id.ButtonDot:
-                    setNumberFieldWindow(",");
+                    setNumberFieldWindow(".");
                     break;
                 case R.id.ButtonEqualTo:
-                    setNumberFieldWindow("=");
+                    setEqualToCounter("=");
                     break;
                 case R.id.ButtonWipe:
                     clearNumberFieldWindow();
                     break;
                 case R.id.ButtonClear:
-                    setNumberFieldWindow("clear");
+                    deleteNumberFieldWindow();
                     break;
                 case R.id.ButtonZero:
                     setNumberFieldWindow("0");
@@ -222,10 +222,31 @@ public class MainActivity extends AppCompatActivity {
     private void setNumberFieldWindow(String arithmetic) {
         counters.setCounter(arithmetic);
         setTextCounter(numberFieldWindow, counters.getCounter());
+        setTextCounter(numberViewWindow, counters.getNumberViewWindow());
     }
+
+    private void setSymbolCounter(String arithmetic) {
+        counters.setSymbolCounter(arithmetic);
+        setTextCounter(numberFieldWindow, counters.getCounter());
+        setTextCounter(numberViewWindow, counters.getNumberViewWindow());
+    }
+
+    private void setEqualToCounter(String arithmetic) {
+        counters.setEqualTo(arithmetic);
+        setTextCounter(numberFieldWindow, counters.getCounter());
+        setTextCounter(numberViewWindow, counters.getNumberViewWindow());
+    }
+
     private void clearNumberFieldWindow() {
         counters.clearCounter();
         setTextCounter(numberFieldWindow, counters.getCounter());
+        setTextCounter(numberViewWindow, counters.getNumberViewWindow());
+    }
+
+    private void deleteNumberFieldWindow() {
+        counters.deleteAllCounter();
+        setTextCounter(numberFieldWindow, counters.getCounter());
+        setTextCounter(numberViewWindow, counters.getNumberViewWindow());
     }
 
     // Установить текст на TextView

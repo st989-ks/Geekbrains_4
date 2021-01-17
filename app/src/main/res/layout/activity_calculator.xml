@@ -11,14 +11,14 @@
         android:id="@+id/numberViewWindow"
         style="@android:style/Widget.DeviceDefault.EditText"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/textViewCalculator"
+        android:layout_height="wrap_content"
         android:autoSizeMaxTextSize="@dimen/textViewSize"
         android:background="@color/outputWindow"
         android:focusable="false"
-        android:gravity="end"
-        android:inputType="phone"
-        android:text="@string/test"
-        app:layout_constraintBottom_toTopOf="@+id/numberFieldWindow" />
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/numberFieldWindow"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/numberFieldWindow"
