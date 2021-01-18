@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/desk_11_132">
 
     <LinearLayout
@@ -20,26 +21,23 @@
 
             <TextView
                 android:id="@+id/numberViewWindow"
-                style="@android:style/Widget.DeviceDefault.EditText"
+                style="@style/TextViewStart"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="50"
-                android:background="@android:color/background_dark"
                 android:focusable="false"
                 android:gravity="start"
                 android:paddingStart="@dimen/margin"
                 android:text="@string/test"
-                android:textColor="@android:color/tab_indicator_text"
                 android:textSize="@dimen/textViewSize"
                 tools:ignore="NestedWeights,RtlSymmetry,SpUsage" />
 
             <TextView
                 android:id="@+id/numberFieldWindow"
-                style="@android:style/Widget.DeviceDefault.EditText"
+                style="@style/TextViewMiddle"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="12"
-                android:background="@android:color/background_light"
                 android:focusable="false"
                 android:gravity="center_vertical|end"
                 android:paddingEnd="@dimen/margin"
@@ -53,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@android:color/background_dark"
+            style="@style/LinerViewBottom"
             android:orientation="vertical">
 
             <LinearLayout
@@ -63,7 +61,7 @@
                 android:layout_weight="1"
                 tools:ignore="NestedWeights">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonClear"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -71,7 +69,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonClear" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSquaring"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -79,7 +77,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonSquaring" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonRoot"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -87,7 +85,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonRoot" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonWipe"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -102,7 +100,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSeven"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -110,7 +108,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonSeven" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonEight"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -118,7 +116,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonEight" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonNine"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -126,7 +124,7 @@
                     android:layout_weight="1"
                     android:text="@string/buttonNine" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSplit"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -141,7 +139,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonFour"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -149,23 +147,23 @@
                     android:layout_weight="1"
                     android:text="@string/ButtonFour" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonFive"
-                    style="@style/ButtonFirst"
                     android:layout_width="0dp"
+                    style="@style/ButtonFirst"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/ButtonFive" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSix"
-                    style="@style/ButtonFirst"
                     android:layout_width="0dp"
+                    style="@style/ButtonFirst"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/ButtonSix" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonMultiply"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -180,7 +178,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonOne"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -188,7 +186,7 @@
                     android:layout_weight="1"
                     android:text="@string/ButtonOne" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonTwo"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -196,7 +194,7 @@
                     android:layout_weight="1"
                     android:text="@string/ButtonTwo" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonThree"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -204,7 +202,7 @@
                     android:layout_weight="1"
                     android:text="@string/ButtonThree" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonMinus"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -219,7 +217,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonDot"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -227,7 +225,7 @@
                     android:layout_weight="1"
                     android:text="@string/ButtonDot" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonZero"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"
@@ -235,15 +233,15 @@
                     android:layout_weight="1"
                     android:text="@string/ButtonZero" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonEqualTo"
-                    style="@style/ButtonFirst"
                     android:layout_width="0dp"
+                    style="@style/ButtonFirst"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/ButtonEqualTo" />
 
-                <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonPlus"
                     style="@style/ButtonFirst"
                     android:layout_width="0dp"

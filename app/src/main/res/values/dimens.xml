@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin">10dp</dimen>
-    <dimen name="buttonSize">20dp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="buttonSize">30dp</dimen>
     <dimen name="textViewSize">35dp</dimen>
     <dimen name="textViewSizeFirst">20dp</dimen>
     <dimen name="toggleButtonLayout">130dp</dimen>

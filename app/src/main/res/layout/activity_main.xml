@@ -107,5 +107,5 @@
         android:background="@color/calenderTextColorThird"
         android:dateTextAppearance="@style/CalenderViewDateCustomText"
         android:theme="@style/CalenderViewCustom"
-        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+        android:weekDayTextAppearance="@style/CalenderViewDateCustomText" />
 </LinearLayout>

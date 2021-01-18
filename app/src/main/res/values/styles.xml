@@ -1,39 +1,40 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--    </style>-->
 
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
         <item name="colorAccent">@color/calenderTextColorSecond</item>
     </style>
 
     <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="android:textColor">@color/calenderTextColorFirst</item>
+        <item name="android:textColor">@color/cardview_shadow_end_color</item>
+    </style>
+    <style name="TextViewStart">
+        <item name="android:background">#F2222121</item>
+         <item name="android:textColor">@android:color/tab_indicator_text</item>
+    </style>
+    <style name="TextViewMiddle">
+        <item name="android:background">@android:color/background_light</item>
+    </style>
+    <style name="LinerViewBottom">
+        <item name="android:background">#1C1C1C</item>
     </style>
 
-    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Large">
-        <item name="android:textColor">@color/calenderTextColorFirst</item>
+    <style name="ButtonFirst" parent="AppTheme">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">@dimen/buttonSize</item>
     </style>
 
-    <style name="ButtonFirst" parent="Widget.AppCompat.Button">
-        <item name="android:gravity">center_vertical|center_horizontal</item>
-        <item name="android:textColor">#FFFFFFFF</item>
-        <item name="android:shadowColor">#FF000000</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:shadowDy">-1</item>
-        <item name="android:shadowRadius">0.2</item>
-        <item name="android:textSize">16dip</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="AppTheme2" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#26282B</item>
+        <item name="colorPrimaryDark">@color/outputWindow</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
