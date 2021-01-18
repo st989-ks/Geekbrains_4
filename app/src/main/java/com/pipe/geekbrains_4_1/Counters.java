@@ -95,6 +95,7 @@ public class Counters {
                 counter.append((x * y));
                 break;
             case "\u00F7":
+                if (x == 0) return;
                 counter.append((x / y));
                 break;
             case "\u221a":

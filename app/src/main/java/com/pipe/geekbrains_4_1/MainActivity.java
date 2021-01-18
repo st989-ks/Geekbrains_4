@@ -11,7 +11,6 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final static String KeyCounters = "Counters";
     private TextView numberFieldWindow;
     private Counters counters;
     private TextView numberViewWindow;
@@ -20,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-
         counters = new Counters();
         initView();
     }
