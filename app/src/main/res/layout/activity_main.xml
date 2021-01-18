@@ -3,38 +3,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/holo_blue_light"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="@dimen/padding">
+    android:padding="@dimen/margin">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding"
+        android:padding="@dimen/margin"
         android:text="@string/textHelloFirst"
         android:textColor="@android:color/primary_text_light_nodisable"
         android:textSize="@dimen/textViewSize"
         tools:ignore="SpUsage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@android:string/ok"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="MissingClass" />
+
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:paddingTop="@dimen/padding"
+        android:paddingTop="@dimen/margin"
         android:text="@string/editTextFirst"
         android:textAlignment="center"
-        android:textColor="@android:color/secondary_text_dark"
-        android:importantForAutofill="no" />
+        android:textColor="@android:color/secondary_text_dark" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding"
+        android:padding="@dimen/margin"
         android:stateListAnimator="@android:anim/anticipate_overshoot_interpolator"
         android:text="@string/buttonTextStart"
         android:textColor="@color/colorPrimaryDark" />
@@ -43,7 +54,7 @@
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding"
+        android:padding="@dimen/margin"
         android:text="@string/switchText"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
@@ -51,7 +62,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="@dimen/padding">
+        android:padding="@dimen/margin">
 
         <CheckBox
             android:id="@+id/checkBox"
@@ -67,7 +78,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:padding="@dimen/padding">
+        android:padding="@dimen/margin">
 
         <CheckBox
             android:id="@+id/checkBox2"
@@ -84,7 +95,7 @@
         android:layout_width="@dimen/toggleButtonLayout"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/backgroundTintToggleButton"
-        android:padding="@dimen/padding"
+        android:padding="@dimen/margin"
         android:text="@string/toggleButtonText"
         android:textOff="@string/textOffFirst"
         android:textOn="@string/textOnFirst" />
@@ -96,7 +107,5 @@
         android:background="@color/calenderTextColorThird"
         android:dateTextAppearance="@style/CalenderViewDateCustomText"
         android:theme="@style/CalenderViewCustom"
-        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
-
-        />
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 </LinearLayout>
