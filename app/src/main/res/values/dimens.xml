@@ -8,4 +8,8 @@
     <dimen name="calenderHeight">260dp</dimen>
     <dimen name="textViewCalculator">250dp</dimen>
     <dimen name="height_button">70dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="weightOne">1</dimen>
+    <dimen name="weightTwo">50</dimen>
+    <dimen name="weightThree">12</dimen>
 </resources>

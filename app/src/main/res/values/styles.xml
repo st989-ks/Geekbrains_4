@@ -1,12 +1,4 @@
 <resources>
-    <!-- Base application theme. -->
-<!--    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
-<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
-<!--        <item name="colorAccent">@color/colorAccent</item>-->
-<!--    </style>-->
-
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
         <item name="colorAccent">@color/calenderTextColorSecond</item>
     </style>
@@ -14,13 +6,16 @@
     <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Large">
         <item name="android:textColor">@color/cardview_shadow_end_color</item>
     </style>
+
     <style name="TextViewStart">
         <item name="android:background">#F2222121</item>
-         <item name="android:textColor">@android:color/tab_indicator_text</item>
+        <item name="android:textColor">@android:color/tab_indicator_text</item>
     </style>
+
     <style name="TextViewMiddle">
         <item name="android:background">@android:color/background_light</item>
     </style>
+
     <style name="LinerViewBottom">
         <item name="android:background">#1C1C1C</item>
     </style>
