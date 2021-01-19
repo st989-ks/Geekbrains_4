@@ -101,7 +101,7 @@ public class Counters {
                 counter.append((x * x));
                 break;
         }
-        numberViewWindow[4] = new StringBuffer(counter.delete(LIMITED, counter.length()));
+        numberViewWindow[4] = new StringBuffer(counterDelete(counter).toString());
     }
 
     private void calculationsMulti() {
