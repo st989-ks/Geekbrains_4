@@ -36,7 +36,8 @@ public class Counters {
     }
 
     public void setEqualTo() {
-        if (numberViewWindow[0] == null) return;
+        if ((numberViewWindow[0] == null) ||
+                numberViewWindow[0].toString().equals("")) return;
         String str = counter.toString();
         counter.delete(0, counter.length());
         if (((numberViewWindow[1].toString()).equals("\u221a")) ||
