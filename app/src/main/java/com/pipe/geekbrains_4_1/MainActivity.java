@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
@@ -14,14 +15,43 @@ public class MainActivity extends AppCompatActivity {
     private TextView numberFieldWindow;
     private Counters counters;
     private TextView numberViewWindow;
+    private static final String STATE_ONE = "STATE_ONE";
+    private static final String STATE_TWO = "STATE_TWO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
+        TextView myTextView = (TextView) findViewById(R.id.numberFieldWindow);
+        TextView myTextViewSecond = (TextView) findViewById(R.id.numberViewWindow);
+        String textOne = "";
+        String textTwo = "";
+        if (savedInstanceState != null && savedInstanceState.containsKey(STATE_ONE)) {
+            textOne = savedInstanceState.getString(STATE_ONE);
+            textTwo = savedInstanceState.getString(STATE_TWO);
+        }
+        myTextView.setText(textOne);
+        myTextViewSecond.setText(textTwo);
         counters = new Counters();
         initView();
     }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        TextView myTextView = (TextView) findViewById(R.id.numberFieldWindow);
+        TextView myTextViewSecond = (TextView) findViewById(R.id.numberViewWindow);
+        outState.putString("STATE_ONE", myTextView.getText().toString());
+        outState.putString("STATE_TWO", myTextViewSecond.getText().toString());
+        super.onSaveInstanceState(outState);
+
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
 
     private void initView() {
         // Получить пользовательские элементы по идентификатору
