@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin">10dp</dimen>
-    <dimen name="buttonSize">20dp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="buttonSize">30dp</dimen>
     <dimen name="textViewSize">35dp</dimen>
     <dimen name="textViewSizeFirst">20dp</dimen>
     <dimen name="toggleButtonLayout">130dp</dimen>
     <dimen name="calenderHeight">260dp</dimen>
     <dimen name="textViewCalculator">250dp</dimen>
     <dimen name="height_button">70dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="weightOne">1</dimen>
+    <dimen name="weightTwo">50</dimen>
+    <dimen name="weightThree">12</dimen>
 </resources>

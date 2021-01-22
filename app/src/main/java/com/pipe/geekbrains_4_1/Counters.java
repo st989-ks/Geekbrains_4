@@ -6,13 +6,14 @@ public class Counters {
     private StringBuffer counter = new StringBuffer("");
     private final StringBuffer[] numberViewWindow = new StringBuffer[5];
     private boolean equal = false;
-
+    private String EQUAL = "=";
+    private String DOT = ".";
+    private int LIMITED = 18;
 
     public void setCounter(String counter) {
-        if (equal) {
-            cleanNumberViewWindow();
-            equal = false;
-        }
+        if (!(this.counter.length() <= LIMITED)) return;
+        if (counter.equals(DOT) & this.counter.indexOf(DOT) >= 0) return;
+        checkBooleanEqual();
         this.counter.append(counter);
     }
 
@@ -27,29 +28,25 @@ public class Counters {
     }
 
     public void setSymbolCounter(String symbol) {
-        if (equal) {
-            cleanNumberViewWindow();
-            equal = false;
-        }
+        checkBooleanEqual();
         String str = counter.toString();
         counter.delete(0, counter.length());
         numberViewWindow[1] = new StringBuffer(symbol);
         numberViewWindow[0] = new StringBuffer(str);
     }
 
-    public void setEqualTo(String arithmetic) {
-        if (numberViewWindow[0] == null) return;
+    public void setEqualTo() {
+        if ((numberViewWindow[0] == null) ||
+                numberViewWindow[0].toString().equals("")) return;
         String str = counter.toString();
         counter.delete(0, counter.length());
-        if ((arithmetic.equals("\u221a")) ||
-                (arithmetic.equals("x\u00B2"))) {
-            numberViewWindow[0] = new StringBuffer(str);
-            numberViewWindow[1] = new StringBuffer(arithmetic);
-            numberViewWindow[2] = new StringBuffer("=");
+        if (((numberViewWindow[1].toString()).equals("\u221a")) ||
+                ((numberViewWindow[1].toString()).equals("x\u00B2"))) {
+            numberViewWindow[2] = new StringBuffer(EQUAL);
             calculationsMulti();
         } else {
             if (str.equals("")) return;
-            numberViewWindow[3] = new StringBuffer(arithmetic);
+            numberViewWindow[3] = new StringBuffer(EQUAL);
             numberViewWindow[2] = new StringBuffer(str);
             calculations();
         }
@@ -105,7 +102,7 @@ public class Counters {
                 counter.append((x * x));
                 break;
         }
-        numberViewWindow[4] = new StringBuffer(counter);
+        numberViewWindow[4] = new StringBuffer(counterDelete(counter).toString());
     }
 
     private void calculationsMulti() {
@@ -118,6 +115,21 @@ public class Counters {
                 counter.append((x * x));
                 break;
         }
-        numberViewWindow[3] = new StringBuffer(counter);
+        numberViewWindow[3] = new StringBuffer(counterDelete(counter).toString());
+    }
+
+    private void checkBooleanEqual() {
+        if (equal) {
+            cleanNumberViewWindow();
+            equal = false;
+        }
+    }
+
+    private StringBuffer counterDelete(StringBuffer counter) {
+        if (counter.length() >= LIMITED) {
+            counter.delete(LIMITED, counter.length());
+            return counter;
+        }
+        return counter;
     }
 }

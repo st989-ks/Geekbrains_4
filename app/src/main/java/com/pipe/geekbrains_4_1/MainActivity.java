@@ -193,16 +193,16 @@ public class MainActivity extends AppCompatActivity {
                     setSymbolCounter("\u00D7");
                     break;
                 case R.id.ButtonSquaring:
-                    setEqualToCounter("x\u00B2");
+                    setSymbolCounter("x\u00B2");
                     break;
                 case R.id.ButtonRoot:
-                    setEqualToCounter("\u221a");
+                    setSymbolCounter("\u221a");
                     break;
                 case R.id.ButtonDot:
                     setNumberFieldWindow(".");
                     break;
                 case R.id.ButtonEqualTo:
-                    setEqualToCounter("=");
+                    setEqualToCounter();
                     break;
                 case R.id.ButtonWipe:
                     clearNumberFieldWindow();
@@ -225,12 +225,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setSymbolCounter(String arithmetic) {
         counters.setSymbolCounter(arithmetic);
-        setTextCounter(numberFieldWindow, counters.getCounter());
-        setTextCounter(numberViewWindow, counters.getNumberViewWindow());
+        setEqualToCounter();
     }
 
-    private void setEqualToCounter(String arithmetic) {
-        counters.setEqualTo(arithmetic);
+    private void setEqualToCounter() {
+        counters.setEqualTo();
         setTextCounter(numberFieldWindow, counters.getCounter());
         setTextCounter(numberViewWindow, counters.getNumberViewWindow());
     }

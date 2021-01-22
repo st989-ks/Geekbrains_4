@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,31 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:ignore="UselessParent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/zero"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
             android:layout_weight="@dimen/weightOne"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/numberViewWindow"
-                style="@style/TextViewStart"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/zero"
-                android:layout_weight="@dimen/weightTwo"
-                android:focusable="false"
-                android:gravity="start"
-                android:paddingStart="@dimen/margin"
-                android:text="@string/test"
-                android:textSize="@dimen/textViewSize"
-                tools:ignore="NestedWeights,RtlSymmetry,SpUsage" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout">
 
             <TextView
                 android:id="@+id/numberFieldWindow"
-                style="@style/TextViewMiddle"
+                style="@style/TextViewMiddleDark"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/zero"
                 android:layout_weight="@dimen/weightThree"
@@ -43,14 +32,27 @@
                 android:singleLine="true"
                 android:text="@string/test"
                 android:textSize="@dimen/textViewSize"
-                tools:ignore="RtlSymmetry,SpUsage" />
+                tools:ignore="NestedWeights,RtlSymmetry,SpUsage" />
+
+            <TextView
+                android:id="@+id/numberViewWindow"
+                style="@style/TextViewStartDark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="@dimen/weightTwo"
+                android:focusable="false"
+                android:gravity="start"
+                android:paddingStart="@dimen/margin"
+                android:text="@string/test"
+                android:textSize="@dimen/textViewSize"
+                tools:ignore="NestedWeights,RtlSymmetry,SpUsage" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
             style="@style/LinerViewBottom"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/zero"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
             android:layout_weight="@dimen/weightOne"
             android:orientation="vertical">
 
@@ -63,7 +65,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonClear"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -71,7 +73,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSquaring"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -79,7 +81,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonRoot"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -87,7 +89,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonWipe"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -102,7 +104,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSeven"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -110,7 +112,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonEight"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -118,7 +120,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonNine"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -126,7 +128,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSplit"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -141,7 +143,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonFour"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -149,7 +151,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonFive"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -157,7 +159,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonSix"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -165,7 +167,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonMultiply"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -180,7 +182,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonOne"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -188,7 +190,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonTwo"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -196,7 +198,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonThree"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -204,7 +206,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonMinus"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -219,7 +221,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonDot"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -227,7 +229,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonZero"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -235,7 +237,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonEqualTo"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -243,7 +245,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/ButtonPlus"
-                    style="@style/ButtonFirst"
+                    style="@style/ButtonFirstDark"
                     android:layout_width="@dimen/zero"
                     android:layout_height="match_parent"
                     android:layout_weight="@dimen/weightOne"
@@ -252,3 +254,4 @@
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+
