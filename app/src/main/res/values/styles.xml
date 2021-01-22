@@ -1,4 +1,5 @@
 <resources>
+
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
         <item name="colorAccent">@color/calenderTextColorSecond</item>
     </style>
@@ -29,8 +30,19 @@
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">#26282B</item>
-        <item name="colorPrimaryDark">@color/outputWindow</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonFirstDark" parent="ButtonFirst">
+        <item name="android:textColor">#BAB17720</item>
+    </style>
+
+    <style name="TextViewStartDark">
+        <item name="android:background">#F2222121</item>
+        <item name="android:textColor">#BAB17720</item>
+    </style>
+
+    <style name="TextViewMiddleDark">
+        <item name="android:background">#E2B17720</item>
     </style>
 
 </resources>
