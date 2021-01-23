@@ -1,5 +1,6 @@
 package com.pipe.geekbrains_4_1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,50 +9,52 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Constants {
 
     private TextView numberFieldWindow;
     private Counters counters;
     private TextView numberViewWindow;
-    private static final String STATE_ONE = "STATE_ONE";
-    private static final String STATE_TWO = "STATE_TWO";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-        TextView myTextView = (TextView) findViewById(R.id.numberFieldWindow);
-        TextView myTextViewSecond = (TextView) findViewById(R.id.numberViewWindow);
-        String textOne = "";
-        String textTwo = "";
-        if (savedInstanceState != null && savedInstanceState.containsKey(STATE_ONE)) {
-            textOne = savedInstanceState.getString(STATE_ONE);
-            textTwo = savedInstanceState.getString(STATE_TWO);
-        }
-        myTextView.setText(textOne);
-        myTextViewSecond.setText(textTwo);
+
         counters = new Counters();
         initView();
+
+        ArrayList<String> myStringView = null;
+        String myStringViewSecond = "";
+
+        if (savedInstanceState != null) {
+            myStringView = savedInstanceState.getStringArrayList(STATE_ONE);
+            myStringViewSecond = savedInstanceState.getString(STATE_TWO);
+        }
+
+        if (!(myStringView == null)) {
+            counters.setNumberViewWindowForSave(myStringView);
+            counters.setCounter(myStringViewSecond);
+            setTextCounter(numberFieldWindow, counters.getCounter());
+            setTextCounter(numberViewWindow, counters.getNumberViewWindow());
+        }
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        TextView myTextView = (TextView) findViewById(R.id.numberFieldWindow);
-        TextView myTextViewSecond = (TextView) findViewById(R.id.numberViewWindow);
-        outState.putString("STATE_ONE", myTextView.getText().toString());
-        outState.putString("STATE_TWO", myTextViewSecond.getText().toString());
+        ArrayList<String> myStringView = this.counters.getNumberViewWindowForSave();
+        String myStringViewSecond = this.counters.getCounter();
+        outState.putStringArrayList("STATE_ONE", myStringView);
+        outState.putString("STATE_TWO", myStringViewSecond);
         super.onSaveInstanceState(outState);
-
-
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
     }
-
 
     private void initView() {
         // Получить пользовательские элементы по идентификатору
@@ -77,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         initButtonMinusClickListener();
         initButtonMultiplyClickListener();
         initButtonRootClickListener();
+        initButtonChangeThemeClickListener();
     }
 
     private void initButtonZeroClickListener() {
@@ -179,6 +183,11 @@ public class MainActivity extends AppCompatActivity {
         buttonRoot.setOnClickListener(onClickListener);
     }
 
+    private void initButtonChangeThemeClickListener() {
+        Button buttonRoot = findViewById(R.id.buttonTheme);
+        buttonRoot.setOnClickListener(onClickListener);
+    }
+
     public View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -242,6 +251,15 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.ButtonZero:
                     setNumberFieldWindow("0");
+                    break;
+                case R.id.buttonTheme:
+                    // Чтобы стартовать активити, надо подготовить интент
+                    // В данном случае это будет явный интент, поскольку здесь передаётся класс активити
+                    Intent runSettings = new Intent(MainActivity.this, ActivitySecond.class);
+                    // Передача данных через интент
+                    // runSettings.putExtra(STATE_THEME, buttonTheme.getText().toString());
+                    // Метод стартует активити, указанную в интенте
+                    startActivity(runSettings);
                     break;
             }
         }

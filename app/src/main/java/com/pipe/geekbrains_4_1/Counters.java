@@ -1,20 +1,28 @@
 package com.pipe.geekbrains_4_1;
 
+import java.util.ArrayList;
+
 public class Counters {
 
     private StringBuilder viewInText = new StringBuilder();
     private StringBuffer counter = new StringBuffer("");
     private final StringBuffer[] numberViewWindow = new StringBuffer[5];
     private boolean equal = false;
-    private String EQUAL = "=";
-    private String DOT = ".";
     private int LIMITED = 18;
 
     public void setCounter(String counter) {
         if (!(this.counter.length() <= LIMITED)) return;
+        String DOT = ".";
         if (counter.equals(DOT) & this.counter.indexOf(DOT) >= 0) return;
         checkBooleanEqual();
         this.counter.append(counter);
+    }
+
+    public void setNumberViewWindowForSave(ArrayList<String> numberViewWindowSave) {
+        for (int i = 0; i < numberViewWindow.length; i++) {
+            if (numberViewWindow[i] == null) numberViewWindow[i] = new StringBuffer("");
+            numberViewWindow[i] = new StringBuffer(numberViewWindowSave.get(i));
+        }
     }
 
     public void clearCounter() {
@@ -40,6 +48,7 @@ public class Counters {
                 numberViewWindow[0].toString().equals("")) return;
         String str = counter.toString();
         counter.delete(0, counter.length());
+        String EQUAL = "=";
         if (((numberViewWindow[1].toString()).equals("\u221a")) ||
                 ((numberViewWindow[1].toString()).equals("x\u00B2"))) {
             numberViewWindow[2] = new StringBuffer(EQUAL);
@@ -55,6 +64,16 @@ public class Counters {
 
     public String getCounter() {
         return counter.toString();
+    }
+
+    public ArrayList<String> getNumberViewWindowForSave() {
+        ArrayList<String> str = new ArrayList(5);
+        for (int i = 0; i < numberViewWindow.length; i++) {
+            if (numberViewWindow[i] == null) numberViewWindow[i] = new StringBuffer("");
+            str.add(numberViewWindow[i].toString());
+        }
+
+        return str;
     }
 
     public String getNumberViewWindow() {

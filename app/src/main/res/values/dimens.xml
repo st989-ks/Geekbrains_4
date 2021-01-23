@@ -2,7 +2,7 @@
 <resources>
     <dimen name="margin">5dp</dimen>
     <dimen name="buttonSize">30dp</dimen>
-    <dimen name="textViewSize">35dp</dimen>
+    <dimen name="textViewSize">25dp</dimen>
     <dimen name="textViewSizeFirst">20dp</dimen>
     <dimen name="toggleButtonLayout">130dp</dimen>
     <dimen name="calenderHeight">260dp</dimen>

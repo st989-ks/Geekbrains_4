@@ -37,4 +37,8 @@
     <string name="ButtonSix">6</string>
     <string name="ButtonFive">5</string>
     <string name="ButtonFour">4</string>
+    <string name="change_topic">Сменить тему</string>
+    <string name="nightTextSwitch">НОЧНАЯ</string>
+    <string name="dayTextSwitch">ДНЕВНАЯ</string>
+    <string name="buttonSave">Вернуться</string>
 </resources>

@@ -46,6 +46,15 @@
                 android:text="@string/test"
                 android:textSize="@dimen/textViewSize"
                 tools:ignore="NestedWeights,RtlSymmetry,SpUsage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonTheme"
+                style="@style/ButtonFirst"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="@dimen/weightThree"
+                android:text="@string/change_topic"
+                android:textSize="@dimen/textViewSize" />
         </LinearLayout>
 
         <LinearLayout

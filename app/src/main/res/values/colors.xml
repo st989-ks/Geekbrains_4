@@ -9,5 +9,7 @@
     <color name="calenderTextColorThird">#1BFF0000</color>
     <color name="outputWindow">#99D6D6D6</color>
     <color name="inputWindow">#9981A0F4</color>
+    <color name="nightTheme">#BAB17720</color>
+    <color name="nightsdsdTheme">#F4A460</color>
 
 </resources>

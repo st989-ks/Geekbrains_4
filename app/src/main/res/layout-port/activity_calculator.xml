@@ -18,6 +18,14 @@
             android:layout_weight="@dimen/weightOne"
             android:orientation="vertical">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonTheme"
+                style="@style/ButtonFirst"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="@dimen/weightThree"
+                android:text="@string/change_topic" />
+
             <TextView
                 android:id="@+id/numberViewWindow"
                 style="@style/TextViewStart"
