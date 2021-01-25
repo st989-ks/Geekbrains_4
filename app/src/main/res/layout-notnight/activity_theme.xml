@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/desk_11_132"
+    android:orientation="vertical"
+    android:padding="@dimen/margin">
+
+    <RadioGroup
+        android:id="@+id/radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/SwitchLite"
+            style="@style/TextViewStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/dayTextSwitch"
+            android:textSize="@dimen/textViewSize" />
+
+        <RadioButton
+            android:id="@+id/SwitchDark"
+            style="@style/TextViewStartDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/nightTextSwitch"
+            android:textSize="@dimen/textViewSize" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ButtonSwitch"
+        style="@style/ButtonFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonSave"
+        android:textSize="@dimen/textViewSize"
+        tools:ignore="SpUsage" />
+</LinearLayout>

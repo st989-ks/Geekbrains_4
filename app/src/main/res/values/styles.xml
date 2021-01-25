@@ -9,6 +9,7 @@
     </style>
 
     <style name="TextViewStart">
+        <item name="android:buttonTint">@android:color/tab_indicator_text</item>
         <item name="android:background">#F2222121</item>
         <item name="android:textColor">@android:color/tab_indicator_text</item>
     </style>
@@ -33,16 +34,17 @@
     </style>
 
     <style name="ButtonFirstDark" parent="ButtonFirst">
-        <item name="android:textColor">#BAB17720</item>
+        <item name="android:textColor">@color/nightTheme</item>
     </style>
 
     <style name="TextViewStartDark">
+        <item name="android:buttonTint">@color/nightTheme</item>
         <item name="android:background">#F2222121</item>
-        <item name="android:textColor">#BAB17720</item>
+        <item name="android:textColor">@color/nightTheme</item>
     </style>
 
     <style name="TextViewMiddleDark">
-        <item name="android:background">#E2B17720</item>
+        <item name="android:background">@color/nightTheme</item>
     </style>
 
 </resources>

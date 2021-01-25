@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/desk_11_132">
+    android:background="@drawable/desk_11_132_dark">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +17,14 @@
             android:layout_height="@dimen/zero"
             android:layout_weight="@dimen/weightOne"
             android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonTheme"
+                style="@style/ButtonFirstDark"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="@dimen/weightThree"
+                android:text="@string/change_topic" />
 
             <TextView
                 android:id="@+id/numberViewWindow"
